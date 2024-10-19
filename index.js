@@ -4,7 +4,7 @@ import cors from "cors"
 import * as cheerio from "cheerio"
 import pLimit from "p-limit"
 
-const limit = pLimit(5)
+const limit = pLimit(3)
 const app = express()
 
 app.use(
@@ -16,6 +16,7 @@ app.use(
     credentials: true,
   })
 )
+
 app.get("/", (req, res) => {
   res.send("Привет, Мир")
 })
