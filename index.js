@@ -8,7 +8,9 @@ const limit = pLimit(5)
 const app = express()
 
 app.use(cors())
-
+app.get("/", (req, res) => {
+  res.send("Привет, Мир")
+})
 app.get("/api/clinic", async (req, res) => {
   try {
     const { data: html } = await axios.get(
