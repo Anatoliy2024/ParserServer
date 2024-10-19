@@ -92,7 +92,7 @@ app.get("/api/clinic", async (req, res) => {
     res.status(500).send("Error occurred")
   }
 })
-
-app.listen(5001, () => {
-  console.log("Server is running PORT 5000")
-})
+export default app
+// app.listen(5001, () => {
+//   console.log("Server is running PORT 5000")
+// })

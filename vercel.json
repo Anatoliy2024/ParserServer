@@ -2,14 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "function/getInfoFromServer.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/clinic",
-      "dest": "index.js"
+      "src": "/api/(.*)",
+      "dest": "/function/getInfoFromServer.js"
     }
   ]
 }
