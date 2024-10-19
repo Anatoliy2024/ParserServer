@@ -4,7 +4,7 @@ import cors from "cors"
 import * as cheerio from "cheerio"
 import pLimit from "p-limit"
 
-const limit = pLimit(50)
+const limit = pLimit(5)
 const app = express()
 
 app.use(
