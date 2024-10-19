@@ -78,6 +78,7 @@ app.get("/api/clinic", async (req, res) => {
               console.log(e)
             }
           })
+          res.json(clinics)
           await Promise.all(clinicPromise)
         } catch (e) {
           console.log(e)
@@ -86,7 +87,7 @@ app.get("/api/clinic", async (req, res) => {
     })
 
     await Promise.all(regionPromises)
-    res.json(clinics)
+    // res.json(clinics)
   } catch (e) {
     console.log(e)
     res.status(500).send("Error occurred")
