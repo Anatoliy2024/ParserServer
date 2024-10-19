@@ -10,7 +10,7 @@ const app = express()
 app.use(
   cors({
     origin:
-      "https://parser-client-git-main-anatoliys-projects-59469f9d.vercel.app/",
+      "https://parser-client-git-main-anatoliys-projects-59469f9d.vercel.app",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
