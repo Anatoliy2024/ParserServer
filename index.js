@@ -7,7 +7,15 @@ import pLimit from "p-limit"
 const limit = pLimit(5)
 const app = express()
 
-app.use(cors())
+app.use(
+  cors({
+    origin:
+      "https://parser-client-jvl8h376y-anatoliys-projects-59469f9d.vercel.app",
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+)
 app.get("/", (req, res) => {
   res.send("Привет, Мир")
 })
